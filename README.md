@@ -9,10 +9,6 @@
 
 ---
 
-## Project Description
-
-This project implements a remote shell system using TCP socket programming in C. The system consists of:
-
 1. **Server**: Listens for client connections, forks child processes to handle each client, executes commands received from clients, and sends output back
 2. **Client**: Connects to the server, sends commands from the user, and displays the output received from the server
 
@@ -67,13 +63,13 @@ Run the server on the remote machine (or localhost for testing):
 ./server [port]
 ```
 
-- Default port is 8080 if not specified
-- Example: `./server` (uses default port 8080)
+- Default port is 8888 if not specified
+- Example: `./server` (uses default port 8888)
 - Example: `./server 9000` (uses port 9000)
 
 The server will display:
 ```
-Server listening on port 8080...
+Server listening on port 8888...
 ```
 
 ### Starting the Client
@@ -85,7 +81,7 @@ Run the client on the local machine:
 ```
 
 - `hostname`: IP address or hostname where server is running
-- `port`: Optional port number (default is 8080)
+- `port`: Optional port number (default is 8888)
 
 Examples:
 ```bash
@@ -110,14 +106,14 @@ osh>
 **On Server Machine:**
 ```bash
 $ ./server
-Server listening on port 8080...
+Server listening on port 8888...
 Client (127.0.0.1:54321) Connected to the server successfully
 ```
 
 **On Client Machine:**
 ```bash
 $ ./client localhost
-Connected to the server (127.0.0.1:8080) successfully
+Connected to the server (127.0.0.1:8888) successfully
 osh> ls -l
 total 48
 -rwxr-xr-x 1 user user 17280 Feb 11 10:30 client
@@ -284,7 +280,7 @@ All errors are reported with descriptive messages using `perror()`.
 ## Notes
 
 - The server must be started before clients can connect
-- Default port is 8080 (can be changed via command line)
+- Default port is 8888 (can be changed via command line)
 - Server continues running after clients disconnect
 - Multiple clients can connect simultaneously
 - Use Ctrl+C to stop the server

@@ -10,7 +10,7 @@
 #include <arpa/inet.h>
 #include <netdb.h>
 
-#define PORT 8080
+#define PORT 8888
 #define BUFFER_SIZE 4096
 #define MAX_COMMAND 1024
 
@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
     if (argc < 2) {
         fprintf(stderr, "Usage: %s <server_host> [port]\n", argv[0]);
         fprintf(stderr, "Example: %s localhost\n", argv[0]);
-        fprintf(stderr, "Example: %s 192.168.1.100 8080\n", argv[0]);
+        fprintf(stderr, "Example: %s 192.168.1.100 8888\n", argv[0]);
         exit(1);
     }
     

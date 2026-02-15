@@ -9,7 +9,7 @@
 #include <arpa/inet.h>
 #include <signal.h>
 
-#define PORT 8080
+#define PORT 8888
 #define BUFFER_SIZE 4096
 #define MAX_ARGS 64
 
